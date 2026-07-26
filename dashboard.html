@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CrossVerse Dashboard</title>
+
+    <style>
+
+        *{
+
+            margin:0;
+
+            padding:0;
+
+            box-sizing:border-box;
+
+            font-family:Arial, Helvetica, sans-serif;
+
+        }
+
+        body{
+
+            background:#0b1020;
+
+            color:white;
+
+        }
+
+        header{
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+
+            padding:20px 40px;
+
+            background:#111827;
+
+            border-bottom:2px solid #00d9ff;
+
+        }
+
+        .logo{
+
+            font-size:30px;
+
+            font-weight:bold;
+
+            color:#00d9ff;
+
+        }
+
+        nav a{
+
+            color:white;
+
+            text-decoration:none;
+
+            margin-left:20px;
+
+            transition:.3s;
+
+        }
+
+        nav a:hover{
+
+            color:#00d9ff;
+
+        }
+
+        .container{
+
+            width:90%;
+
+            max-width:1200px;
+
+            margin:auto;
+
+            padding:40px 0;
+
+        }
+
+        .welcome{
+
+            margin-bottom:30px;
+
+        }
+
+        .cards{
+
+            display:grid;
+
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+            gap:20px;
+
+        }
+
+        .card{
+
+            background:#18233b;
+
+            border-radius:15px;
+
+            padding:25px;
+
+            border:1px solid #00d9ff55;
+
+            box-shadow:0 0 15px rgba(0,217,255,.15);
+
+        }
+
+        h2{
+
+            margin-bottom:15px;
+
+            color:#00d9ff;
+
+        }
+
+        button{
+
+            margin-top:15px;
+
+            background:#00d9ff;
+
+            color:black;
+
+            border:none;
+
+            padding:12px 20px;
+
+            border-radius:8px;
+
+            cursor:pointer;
+
+            font-weight:bold;
+
+        }
+
+        button:hover{
+
+            background:#54ecff;
+
+        }
+
+        ul{
+
+            list-style:none;
+
+            line-height:2;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">CrossVerse</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Players</a>
+
+<a href="#">Clans</a>
+
+<a href="#">Leaderboards</a>
+
+<a href="index.html">Logout</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="welcome">
+
+<h1>Welcome to CrossVerse 🎮</h1>
+
+<p>Your gaming journey starts here.</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>Profile</h2>
+
+<p><strong>Username:</strong> Gamer</p>
+
+<p><strong>XP:</strong> 0</p>
+
+<p><strong>Reputation:</strong> 0</p>
+
+<p><strong>Clan:</strong> None</p>
+
+<button>Edit Profile</button>
+
+</div>
+
+<div class="card">
+
+<h2>Quick Actions</h2>
+
+<ul>
+
+<li>🎮 Find Players</li>
+
+<li>👥 Friends</li>
+
+<li>🛡️ Clans</li>
+
+<li>🏆 Leaderboards</li>
+
+<li>🎵 Profile Music</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Premium</h2>
+
+<p>Upgrade to CrossVerse Premium.</p>
+
+<h3>$25/month</h3>
+
+<button>Upgrade</button>
+
+</div>
+
+<div class="card">
+
+<h2>Recent Activity</h2>
+
+<ul>
+
+<li>✅ Welcome to CrossVerse</li>
+
+<li>✅ Complete your profile</li>
+
+<li>✅ Link your gaming accounts</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
