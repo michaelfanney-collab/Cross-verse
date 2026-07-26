@@ -1,32 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  alert("login.js loaded");
+
   const form = document.getElementById("login-form");
+
+  if (!form) {
+
+    alert("Login form not found!");
+
+    return;
+
+  }
 
   form.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
+    alert("Login button clicked");
+
     const email = document.getElementById("email").value;
 
     const password = document.getElementById("password").value;
 
-    const { error } = await supabase.auth.signInWithPassword({
+    try {
 
-      email,
+      const { error } = await supabase.auth.signInWithPassword({
 
-      password,
+        email,
 
-    });
+        password,
 
-    if (error) {
+      });
 
-      alert("Login failed: " + error.message);
+      if (error) {
 
-    } else {
+        alert("Login failed: " + error.message);
 
-      alert("Login successful!");
+      } else {
 
-      window.location.href = "dashboard.html";
+        alert("Login successful!");
+
+        window.location.href = "dashboard.html";
+
+      }
+
+    } catch (err) {
+
+      alert("JavaScript Error: " + err.message);
 
     }
 
