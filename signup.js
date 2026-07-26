@@ -32,7 +32,43 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
 
     }
 
+    try {
+
     const { data, error } = await supabase.auth.signUp({
+
+        email: email,
+
+        password: password,
+
+        options: {
+
+            data: {
+
+                username: username
+
+            }
+
+        }
+
+    });
+
+    if (error) {
+
+        alert("Signup Error: " + error.message);
+
+    } else {
+
+        alert("SUCCESS!");
+
+        window.location.href = "login.html";
+
+    }
+
+} catch (err) {
+
+    alert("JavaScript Error: " + err.message);
+
+}
 
         email: email,
 
