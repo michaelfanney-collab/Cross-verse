@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
 
-      const { error } = await supabase.auth.signInWithPassword({
+      const { error } = await window.supabaseClient.auth.signInWithPassword({({
 
         email,
 
