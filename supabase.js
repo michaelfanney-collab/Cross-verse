@@ -22,3 +22,4 @@ const supabase = window.supabase.createClient(
 
 window.supabaseClient = supabase;
 
+ 
