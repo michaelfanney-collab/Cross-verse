@@ -1,24 +1,22 @@
-if (!window.supabase) {
+document.addEventListener("DOMContentLoaded", () => {
 
-    alert("ERROR: Supabase library did not load.");
+  const form = document.getElementById("signupForm");
 
-}
+  if (!form) {
 
-document.getElementById("signupForm").addEventListener("submit", async (e) => {
+    alert("Signup form not found.");
+
+    return;
+
+  }
+
+  form.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
-    if (typeof supabase === "undefined") {
+    const username = document.getElementById("username").value.trim();
 
-        alert("ERROR: Supabase client was not created.");
-
-        return;
-
-    }
-
-    const username = document.getElementById("username").value;
-
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
 
     const password = document.getElementById("password").value;
 
@@ -26,79 +24,53 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
 
     if (password !== confirmPassword) {
 
-        alert("Passwords do not match.");
+      alert("Passwords do not match.");
 
-        return;
+      return;
 
     }
 
     try {
 
-    const { data, error } = await window.supabaseClient.auth.signUp({({
+      const { data, error } = await window.supabaseClient.auth.signUp({
 
-        email: email,
+        email,
 
-        password: password,
-
-        options: {
-
-            data: {
-
-                username: username
-
-            }
-
-        }
-
-    });
-
-    if (error) {
-
-        alert("Signup Error: " + error.message);
-
-    } else {
-
-        alert("SUCCESS!");
-
-        window.location.href = "login.html";
-
-    }
-
-} catch (err) {
-
-    alert("JavaScript Error: " + err.message);
-
-}
-
-        email: email,
-
-        password: password,
+        password,
 
         options: {
 
-            data: {
+          data: {
 
-                username: username
+            username: username
 
-            }
+          }
 
         }
 
-    });
+      });
 
-    if (error) {
+      if (error) {
 
-        alert("Signup Error: " + error.message);
+        alert("Signup failed: " + error.message);
 
-    } else {
+        return;
 
-        alert("🎉 Account created! Check your email to verify your account.");
+      }
 
-        window.location.href = "login.html";
+      alert("Account created successfully!");
+
+      window.location.href = "login.html";
+
+    } catch (err) {
+
+      alert("JavaScript Error: " + err.message);
 
     }
+
+  });
 
 });
-            
 
-     
+    
+        
