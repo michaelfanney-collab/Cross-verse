@@ -1,6 +1,20 @@
+if (!window.supabase) {
+
+    alert("ERROR: Supabase library did not load.");
+
+}
+
 document.getElementById("signupForm").addEventListener("submit", async (e) => {
 
     e.preventDefault();
+
+    if (typeof supabase === "undefined") {
+
+        alert("ERROR: Supabase client was not created.");
+
+        return;
+
+    }
 
     const username = document.getElementById("username").value;
 
@@ -38,7 +52,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
 
     if (error) {
 
-        alert(error.message);
+        alert("Signup Error: " + error.message);
 
     } else {
 
@@ -49,3 +63,6 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
     }
 
 });
+            
+
+     
