@@ -31,7 +31,7 @@ signupForm.addEventListener("submit", async (e) => {
 
   // Create profile
   const { error: profileError } = await supabase
-    .from("profiles")
+    .from("Profiles")
     .insert({
       id: user.id,
       username: username,
