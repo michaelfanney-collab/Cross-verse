@@ -1149,3 +1149,144 @@ body::before{
     font-size:.9rem;
 
 }
+
+
+/* =========================================
+
+   SECTION 10 - MOBILE & ANIMATIONS
+
+========================================= */
+
+/* Fade In Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero,
+
+.stat-card,
+
+.game-card,
+
+.leader-card,
+
+.clan-card,
+
+.radio,
+
+.premium,
+
+.footer{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    .nav-links{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .stats-grid,
+
+    .games-grid,
+
+    .leaderboard-grid,
+
+    .clan-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#8b5cf6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#a855f7;
+
+}
+
+
