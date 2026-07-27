@@ -980,3 +980,84 @@ body::before{
     color:#d6d6d6;
 
 }
+
+
+/* =========================================
+
+   SECTION 8 - RADIO & PREMIUM
+
+========================================= */
+
+.radio,
+
+.premium{
+
+    text-align:center;
+
+}
+
+.radio{
+
+    padding:90px 20px;
+
+}
+
+.radio p{
+
+    max-width:700px;
+
+    margin:20px auto 40px;
+
+}
+
+.premium{
+
+    margin-top:60px;
+
+}
+
+.premium h3{
+
+    font-size:2.5rem;
+
+    color:#8b5cf6;
+
+    margin:20px 0;
+
+    text-shadow:0 0 20px #8b5cf6;
+
+}
+
+.premium ul{
+
+    list-style:none;
+
+    margin:40px auto;
+
+    max-width:400px;
+
+}
+
+.premium li{
+
+    background:rgba(255,255,255,.05);
+
+    margin:15px 0;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(139,92,246,.30);
+
+    transition:.3s;
+
+}
+
+.premium li:hover{
+
+    background:rgba(139,92,246,.20);
+
+    transform:scale(1.03);
+
+}
