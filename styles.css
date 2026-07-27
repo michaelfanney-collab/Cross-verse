@@ -1061,3 +1061,91 @@ body::before{
     transform:scale(1.03);
 
 }
+
+/* =========================================
+
+   SECTION 9 - FOOTER
+
+========================================= */
+
+.footer{
+
+    margin-top:100px;
+
+    background:rgba(10,10,25,.95);
+
+    border-top:2px solid rgba(139,92,246,.30);
+
+    padding:60px 20px;
+
+}
+
+.footer-content{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.footer h2{
+
+    color:#8b5cf6;
+
+    margin-bottom:20px;
+
+    text-shadow:0 0 15px #8b5cf6;
+
+}
+
+.footer p{
+
+    color:#cfcfcf;
+
+    margin:15px 0;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin:35px 0;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#8b5cf6;
+
+    text-shadow:0 0 10px #8b5cf6;
+
+}
+
+.copyright{
+
+    margin-top:30px;
+
+    color:#888;
+
+    font-size:.9rem;
+
+}
