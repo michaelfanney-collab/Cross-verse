@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     e.preventDefault();
 
-    const username = document.getElementById("username").value.trim();
+    const user_name = document.getElementById("user_name").value.trim();
 
     const email = document.getElementById("email").value.trim();
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           data: {
 
-            username: username
+            user_name: user_name
 
           }
 
@@ -70,9 +70,9 @@ const { error: profileError } = await window.supabaseClient
 
       id: data.user.id,
 
-      username: username,
+      user_name: user_name,
 
-      display_name: username,
+      display_name: user_name,
 
       xp: 0,
 
