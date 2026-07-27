@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
               
 
-              avatar_url: ""
+              
 
             }
 
