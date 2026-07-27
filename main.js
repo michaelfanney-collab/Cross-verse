@@ -132,3 +132,34 @@ buttons.forEach(button => {
     });
 
 });
+
+/* =========================================
+   SECTION 5 - FUTURE FEATURES
+========================================= */
+
+const CrossVerse = {
+
+    version: "1.0",
+
+    features: {
+
+        profiles: true,
+
+        clans: true,
+
+        leaderboards: true,
+
+        xpSystem: true,
+
+        messaging: true,
+
+        radio: true,
+
+        premium: true
+
+    }
+
+};
+
+console.log("CrossVerse Version:", CrossVerse.version);
+console.log("Features Loaded:", CrossVerse.features);
