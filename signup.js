@@ -52,17 +52,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (error) {
 
-        alert("Signup failed: " + error.message);
+  alert("Signup failed: " + error.message);
 
-        return;
+  return;
 
-      }
+}
 
-      alert("Account created successfully!");
+// Create a profile for the new user
 
-      window.location.href = "login.html";
+const { error: profileError } = await window.supabaseClient
 
-    } catch (err) {
+  .from("profiles")
+
+  .insert([
+
+    {
+
+      id: data.user.id,
+
+      username: username,
+
+      display_name: username,
+
+      xp: 0,
+
+      reputation: 0,
+
+      premium: false
+
+    }
+
+  ]);
+
+if (profileError) {
+
+  alert("Profile creation failed: " + profileError.message);
+
+  return;
+
+}
+
+alert("Account created successfully!");
+
+window.location.href = "login.html";
+      
+      } catch (err) {
 
       alert("JavaScript Error: " + err.message);
 
