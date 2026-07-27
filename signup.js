@@ -1,4 +1,4 @@
-alert("signup.js started");
+
 
   document.addEventListener("DOMContentLoaded", () => {
 
