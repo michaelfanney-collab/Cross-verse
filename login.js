@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
 
-  alert("login.js loaded");
+document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("login-form");
 
@@ -16,9 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     e.preventDefault();
 
-    alert("Login button clicked");
-
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
 
     const password = document.getElementById("password").value;
 
@@ -33,34 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (error) {
-  alert("Signup failed: " + error.message);
-  return;
-}
 
-// Create a profile for the new user
-const { error: profileError } = await window.supabaseClient
-  .from("profiles")
-  .insert([
-    {
-      id: data.user.id,
-      username: username,
-      display_name: username,
-      xp: 0,
-      reputation: 0,
-      premium: false
-    }
-  ]);
+        alert("Login failed: " + error.message);
 
-if (profileError) {
-  alert("Profile creation failed: " + profileError.message);
-  return;
-}
-
-alert("Account created successfully!");
-
-window.location.href = "login.html";
+        return;
 
       }
+
+      alert("Login successful!");
+
+      window.location.href = "dashboard.html";
 
     } catch (err) {
 
@@ -70,8 +49,7 @@ window.location.href = "login.html";
 
   });
 
-});  
-
+});
 
 
 
