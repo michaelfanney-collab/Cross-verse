@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
               id: data.user.id,
 
-              username: username,
+              user_name: username,
 
               
 
