@@ -1,6 +1,4 @@
-
-
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("signupForm");
 
@@ -109,3 +107,5 @@ window.location.href = "login.html";
 });
 
     
+
+  
