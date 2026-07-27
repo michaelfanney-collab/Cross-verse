@@ -110,3 +110,25 @@ revealElements.forEach(item=>{
     observer.observe(item);
 
 });
+
+/* =========================================
+   SECTION 4 - BUTTON EFFECTS
+========================================= */
+
+const buttons = document.querySelectorAll(".primary-btn, .secondary-btn");
+
+buttons.forEach(button => {
+
+    button.addEventListener("mouseenter", () => {
+
+        button.style.transform = "translateY(-5px) scale(1.05)";
+
+    });
+
+    button.addEventListener("mouseleave", () => {
+
+        button.style.transform = "translateY(0) scale(1)";
+
+    });
+
+});
