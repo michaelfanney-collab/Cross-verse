@@ -31,3 +31,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+/* =========================================
+   SECTION 2 - ANIMATED STATS
+========================================= */
+
+const statNumbers = document.querySelectorAll(".stat-card h3");
+
+statNumbers.forEach((stat) => {
+
+    const target = parseInt(stat.textContent) || 0;
+
+    let count = 0;
+
+    const speed = Math.max(1, Math.ceil(target / 50));
+
+    function updateCounter() {
+
+        if (count < target) {
+
+            count += speed;
+
+            if (count > target) count = target;
+
+            stat.textContent = count;
+
+            requestAnimationFrame(updateCounter);
+
+        } else {
+
+            stat.textContent = target;
+
+        }
+
+    }
+
+    updateCounter();
+
+});
