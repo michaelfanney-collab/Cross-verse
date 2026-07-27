@@ -39,3 +39,32 @@ async function loadDashboard() {
 }
 
 loadDashboard(); 
+
+/* =========================================
+
+   XP PROGRESS
+
+========================================= */
+
+const xp = 35;
+
+const xpFill = document.getElementById("xpFill");
+
+const xpPercent = document.getElementById("xpPercent");
+
+const level = document.getElementById("level");
+
+if (xpFill && xpPercent && level) {
+
+    xpFill.style.width = xp + "%";
+
+    xpPercent.textContent = xp + "%";
+
+    if (xp >= 100) {
+
+        level.textContent = "2";
+
+    }
+
+}
+
