@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     e.preventDefault();
 
-    const user_name = document.getElementById("user_name").value.trim();
+    const username = document.getElementById("user_name").value.trim();
 
     const email = document.getElementById("email").value.trim();
 
