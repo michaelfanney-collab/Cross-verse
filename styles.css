@@ -199,5 +199,60 @@ nav a:hover {
 
 }
 
+section{
+
+    width:85%;
+
+    max-width:1100px;
+
+    margin:40px auto;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(0,212,255,.25);
+
+    box-shadow:
+
+    0 0 20px rgba(0,212,255,.18);
+
+    transition:.35s;
+
+}
+
+section:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 0 35px rgba(0,212,255,.55),
+
+    0 0 55px rgba(124,58,237,.35);
+
+}
+
+section h2{
+
+    color:#00d4ff;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+section p{
+
+    color:#d7d7ff;
+
+    line-height:1.8;
+
+}
 
 
