@@ -33,14 +33,32 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (error) {
+  alert("Signup failed: " + error.message);
+  return;
+}
 
-        alert("Login failed: " + error.message);
+// Create a profile for the new user
+const { error: profileError } = await window.supabaseClient
+  .from("profiles")
+  .insert([
+    {
+      id: data.user.id,
+      username: username,
+      display_name: username,
+      xp: 0,
+      reputation: 0,
+      premium: false
+    }
+  ]);
 
-      } else {
+if (profileError) {
+  alert("Profile creation failed: " + profileError.message);
+  return;
+}
 
-        alert("Login successful!");
+alert("Account created successfully!");
 
-        window.location.href = "dashboard.html";
+window.location.href = "login.html";
 
       }
 
@@ -53,3 +71,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
