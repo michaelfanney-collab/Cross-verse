@@ -38,4 +38,4 @@ async function loadDashboard() {
         data.Clan || "None";
 }
 
-loadDashboard();
+loadDashboard(); 
