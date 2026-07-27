@@ -42,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
+alert("User ID: " + data.user?.id);
+alert("Session: " + (data.session ? "YES" : "NO"));
+
       if (error) {
 
         alert("Signup failed: " + error.message);
