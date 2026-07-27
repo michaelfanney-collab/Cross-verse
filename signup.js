@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           data: {
 
-            user_name: user_name
+            user_name: username
 
           }
 
@@ -70,9 +70,9 @@ const { error: profileError } = await window.supabaseClient
 
       id: data.user.id,
 
-      user_name: user_name,
+      user_name: username,
 
-      display_name: user_name,
+      display_name: username,
 
       xp: 0,
 
