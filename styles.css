@@ -699,4 +699,134 @@ body::before{
 }
 
 
+/* =========================================
 
+   SECTION 4 - COMMUNITY STATS
+
+========================================= */
+
+.stats-section{
+
+    text-align:center;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.stat-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(139,92,246,.35);
+
+    border-radius:18px;
+
+    padding:35px 25px;
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 30px rgba(139,92,246,.6);
+
+}
+
+.stat-card h3{
+
+    font-size:3rem;
+
+    color:#8b5cf6;
+
+    margin-bottom:15px;
+
+    text-shadow:0 0 18px #8b5cf6;
+
+}
+
+.stat-card p{
+
+    color:#d6d6d6;
+
+    font-size:1rem;
+
+}
+
+/* =========================================
+
+   SECTION 5 - SUPPORTED GAMES
+
+========================================= */
+
+.games{
+
+    text-align:center;
+
+}
+
+.games-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    margin-top:45px;
+
+}
+
+.game-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(124,58,237,.30);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    border-color:#8b5cf6;
+
+    box-shadow:0 0 35px rgba(139,92,246,.6);
+
+}
+
+.game-card h3{
+
+    color:#ffffff;
+
+    margin-bottom:15px;
+
+}
+
+.game-card p{
+
+    color:#cfcfcf;
+
+}
