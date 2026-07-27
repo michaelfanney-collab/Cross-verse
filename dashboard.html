@@ -158,9 +158,33 @@
 
             list-style:none;
 
-            line-height:2;
+            .xp-bar{
 
-        }
+    width:100%;
+
+    height:20px;
+
+    background:#2a2f45;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin:15px 0;
+
+}
+
+.xp-fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#7c3aed,#38bdf8);
+
+    transition:width .8s ease;
+
+}
 
     </style>
 
@@ -254,6 +278,22 @@
 <p><strong>Reputation:</strong> <span id="reputation">0</span></p>
 
 <p><strong>Clan:</strong> <span id="clan">None</span></p>
+
+</div>
+
+<div class="card">
+
+    <h2>⭐ Level Progress</h2>
+
+    <p><strong>Level:</strong> <span id="level">1</span></p>
+
+    <div class="xp-bar">
+
+        <div class="xp-fill" id="xpFill"></div>
+
+    </div>
+
+    <p><span id="xpPercent">0%</span> to Level 2</p>
 
 </div>
 
