@@ -830,3 +830,82 @@ body::before{
     color:#cfcfcf;
 
 }
+
+/* =========================================
+
+   SECTION 6 - LEADERBOARDS
+
+========================================= */
+
+.leaderboards{
+
+    text-align:center;
+
+}
+
+.leaderboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+.leader-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(139,92,246,.30);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.leader-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 35px rgba(139,92,246,.60);
+
+}
+
+.leader-card h3{
+
+    color:#8b5cf6;
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+.leader-card p{
+
+    color:white;
+
+    font-size:1.2rem;
+
+}
+
+.leader-card span{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:#b794ff;
+
+    font-weight:bold;
+
+}
+
