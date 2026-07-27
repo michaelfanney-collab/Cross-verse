@@ -68,3 +68,8 @@ if (xpFill && xpPercent && level) {
 
 }
 
+function upgradePremium() {
+
+    alert("🚀 CrossVerse Premium is coming soon!\n\n$25/month\n\n• Bonus XP\n• Exclusive Badges\n• Premium Profile Features\n• Future Premium Rewards");
+
+}
