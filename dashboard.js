@@ -35,8 +35,20 @@ async function loadDashboard() {
         data.Reputation;
 
     document.getElementById("clan").textContent =
+        document.getElementById("dashboardName").textContent =
+
+    data.User_name || "Player";
+
+document.getElementById("xpValue").textContent =
+
+    (data.Xp || 0) + " XP";
+
+document.getElementById("clanValue").textContent =
+
+    data.Clan || "No Clan";
         data.Clan || "None";
 }
+
 
 loadDashboard(); 
 
@@ -73,3 +85,8 @@ function upgradePremium() {
     alert("🚀 CrossVerse Premium is coming soon!\n\n$25/month\n\n• Bonus XP\n• Exclusive Badges\n• Premium Profile Features\n• Future Premium Rewards");
 
 }
+
+
+
+
+
