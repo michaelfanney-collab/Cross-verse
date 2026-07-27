@@ -135,3 +135,69 @@ nav a:hover {
     text-shadow: 0 0 10px #00d4ff;
 
 }
+
+
+.hero{
+
+    min-height:85vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    margin:0;
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    color:#00d4ff;
+
+    text-shadow:
+
+    0 0 12px #00d4ff,
+
+    0 0 30px #00d4ff,
+
+    0 0 60px #7c3aed;
+
+}
+
+.hero h2{
+
+    font-size:42px;
+
+    margin:20px 0;
+
+    color:#ffffff;
+
+    text-shadow:0 0 18px #7c3aed;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    max-width:700px;
+
+    color:#d6d6ff;
+
+    line-height:1.8;
+
+}
+
+
+
