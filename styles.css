@@ -2,13 +2,19 @@ body {
 
   margin: 0;
 
-  font-family: Arial, sans-serif;
-
-  background: linear-gradient(135deg, #0a0a23, #1a1a40);
+  font-family: Arial, Helvetica, sans-serif;
 
   color: white;
 
   text-align: center;
+
+  background:
+
+    radial-gradient(circle at top, #2a0066 0%, #0a0a23 35%, #050510 100%);
+
+  background-attachment: fixed;
+
+  overflow-x: hidden;
 
 }
 
