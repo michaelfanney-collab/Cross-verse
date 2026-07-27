@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
               username: username,
 
-              full_name: username,
+              
 
               avatar_url: ""
 
