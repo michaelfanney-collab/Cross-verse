@@ -1,3 +1,294 @@
+/* =========================================
+   CROSSVERSE GAMING
+   SECTION 1 - FOUNDATION
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    color:white;
+
+    background:
+    linear-gradient(rgba(10,10,25,.90),rgba(5,5,20,.95)),
+    url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+/* Links */
+
+a{
+
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+
+}
+
+a:hover{
+
+    color:#8b5cf6;
+
+}
+
+/* Images */
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+/* Sections */
+
+section{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:80px 0;
+
+}
+
+/* Headings */
+
+h1{
+
+    font-size:4rem;
+    font-weight:800;
+    text-transform:uppercase;
+
+}
+
+h2{
+
+    font-size:2.5rem;
+    margin-bottom:30px;
+    text-align:center;
+
+}
+
+h3{
+
+    font-size:1.4rem;
+
+}
+
+p{
+
+    color:#d6d6d6;
+    line-height:1.7;
+
+}
+
+/* Buttons */
+
+.primary-btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:#7c3aed;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    margin:10px;
+
+}
+
+.primary-btn:hover{
+
+    background:#9f67ff;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 25px #8b5cf6;
+
+}
+
+.secondary-btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    border:2px solid #7c3aed;
+
+    border-radius:12px;
+
+    color:white;
+
+    transition:.3s;
+
+    margin:10px;
+
+}
+
+.secondary-btn:hover{
+
+    background:#7c3aed;
+
+    transform:translateY(-4px);
+
+}
+
+
+
+
+/* =========================================
+
+   SECTION 2 - NAVIGATION
+
+========================================= */
+
+.navbar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:rgba(15,15,35,.85);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(139,92,246,.30);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo-icon{
+
+    font-size:2rem;
+
+}
+
+.logo-text h2{
+
+    margin:0;
+
+    font-size:1.8rem;
+
+    color:#8b5cf6;
+
+    text-shadow:0 0 15px #8b5cf6;
+
+}
+
+.logo-text span{
+
+    color:#ffffff;
+
+    font-size:.8rem;
+
+    letter-spacing:3px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#8b5cf6;
+
+    text-shadow:0 0 12px #8b5cf6;
+
+}
+
+.signup-btn{
+
+    background:#7c3aed;
+
+    padding:10px 22px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.signup-btn:hover{
+
+    background:#9f67ff;
+
+    color:white;
+
+    box-shadow:0 0 20px #8b5cf6;
+
+}
+
+
+
+
+
 
 body {
 
