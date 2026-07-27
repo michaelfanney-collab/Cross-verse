@@ -1,7 +1,6 @@
- const supabase = window.supabaseClient;
+const supabase = window.supabaseClient;
 
 async function loadDashboard() {
-
     const {
         data: { session },
         error
@@ -25,68 +24,64 @@ async function loadDashboard() {
         return;
     }
 
+    // Dashboard Profile
     document.getElementById("username").textContent =
         data.User_name || "Unknown";
 
     document.getElementById("xp").textContent =
-        data.Xp;
+        data.Xp || 0;
 
     document.getElementById("reputation").textContent =
-        data.Reputation;
+        data.Reputation || 0;
 
     document.getElementById("clan").textContent =
-        document.getElementById("dashboardName").textContent =
-
-    data.User_name || "Player";
-
-document.getElementById("xpValue").textContent =
-
-    (data.Xp || 0) + " XP";
-
-document.getElementById("clanValue").textContent =
-
-    data.Clan || "No Clan";
         data.Clan || "None";
-}
 
-
-loadDashboard(); 
-
-/* =========================================
-
-   XP PROGRESS
-
-========================================= */
-
-const xp = 35;
-
-const xpFill = document.getElementById("xpFill");
-
-const xpPercent = document.getElementById("xpPercent");
-
-const level = document.getElementById("level");
-
-if (xpFill && xpPercent && level) {
-
-    xpFill.style.width = xp + "%";
-
-    xpPercent.textContent = xp + "%";
-
-    if (xp >= 100) {
-
-        level.textContent = "2";
-
+    // Player Overview
+    const dashboardName = document.getElementById("dashboardName");
+    if (dashboardName) {
+        dashboardName.textContent = data.User_name || "Player";
     }
 
+    const xpValue = document.getElementById("xpValue");
+    if (xpValue) {
+        xpValue.textContent = (data.Xp || 0) + " XP";
+    }
+
+    const clanValue = document.getElementById("clanValue");
+    if (clanValue) {
+        clanValue.textContent = data.Clan || "No Clan";
+    }
+
+    // XP Progress
+    const xp = Math.min(data.Xp || 0, 100);
+
+    const xpFill = document.getElementById("xpFill");
+    const xpPercent = document.getElementById("xpPercent");
+    const level = document.getElementById("level");
+
+    if (xpFill) {
+        xpFill.style.width = xp + "%";
+    }
+
+    if (xpPercent) {
+        xpPercent.textContent = xp + "%";
+    }
+
+    if (level) {
+        level.textContent = Math.floor((data.Xp || 0) / 100) + 1;
+    }
 }
+
+loadDashboard();
 
 function upgradePremium() {
-
-    alert("🚀 CrossVerse Premium is coming soon!\n\n$25/month\n\n• Bonus XP\n• Exclusive Badges\n• Premium Profile Features\n• Future Premium Rewards");
-
+    alert(
+        "🚀 CrossVerse Premium is coming soon!\n\n" +
+        "$25/month\n\n" +
+        "• Bonus XP\n" +
+        "• Exclusive Badges\n" +
+        "• Premium Profile Features\n" +
+        "• Future Premium Rewards"
+    );
 }
-
-
-
-
-
