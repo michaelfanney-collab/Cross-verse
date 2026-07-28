@@ -34,17 +34,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const { data, error } =
 
-        await window.supabaseClient.auth.signUp({
+  await window.supabaseClient.auth.signUp({
 
-          email,
+    email,
 
-          password,
+    password,
 
-        });
+  });
 
-alert("User ID: " + data.user?.id);
+if (error) {
+
+  alert("Signup failed: " + error.message);
+
+  return;
+
+}
+
+if (!data.user) {
+
+  alert("No user was returned from Supabase.");
+
+  console.log(data);
+
+  return;
+
+}
+
+alert("User ID: " + data.user.id);
+
 alert("Session: " + (data.session ? "YES" : "NO"));
-
+      
       if (error) {
 
         alert("Signup failed: " + error.message);
