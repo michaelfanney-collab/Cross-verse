@@ -30,82 +30,70 @@ async function loadProfile() {
 
     if (error) {
 
-        console.error(error);
+        console.log(error);
 
         return;
 
     }
 
-    // Username
+    document.getElementById("username").textContent =
 
-    const username = document.getElementById("username");
+        data.User_name || "Unknown";
 
-    if (username) {
+    document.getElementById("bioInput").value =
 
-        username.textContent = data.User_name || "Player";
+        data.Bio || "";
 
-    }
+    document.getElementById("favoriteGame").textContent =
 
-    // XP
+        data.Favorite_Game || "Not set";
 
-    const xp = document.getElementById("xp");
+    document.getElementById("platform").textContent =
 
-    if (xp) {
+        data.Platform || "Not set";
 
-        xp.textContent = data.Xp || 0;
+    document.getElementById("clan").textContent =
 
-    }
+        data.Clan || "None";
 
-    // Reputation
+    document.getElementById("xp").textContent =
 
-    const reputation = document.getElementById("reputation");
+        data.Xp || 0;
 
-    if (reputation) {
+    document.getElementById("reputation").textContent =
 
-        reputation.textContent = data.Reputation || 0;
+        data.Reputation || 0;
 
-    }
+    document.getElementById("saveProfile").addEventListener("click", async () => {
 
-    // Clan
+        const newBio = document.getElementById("bioInput").value;
 
-    const clan = document.getElementById("clan");
+        const { error } = await supabase
 
-    if (clan) {
+            .from("Profiles")
 
-        clan.textContent = data.Clan || "No Clan";
+            .update({
 
-    }
+                Bio: newBio
 
-    // Bio
+            })
 
-    const bio = document.getElementById("bio");
+            .eq("id", user.id);
 
-    if (bio) {
+        if (error) {
 
-        bio.textContent = data.Bio || "No bio yet.";
+            alert(error.message);
 
-    }
+            return;
 
-    // Favorite Game
+        }
 
-    const favoriteGame = document.getElementById("favoriteGame");
+        document.getElementById("saveStatus").textContent =
 
-    if (favoriteGame) {
+            "✅ Profile Saved!";
 
-        favoriteGame.textContent = data.Favorite_Game || "None";
-
-    }
-
-    // Platform
-
-    const platform = document.getElementById("platform");
-
-    if (platform) {
-
-        platform.textContent = data.Platform || "Unknown";
-
-    }
+    });
 
 }
 
-loadProfile(); 
+loadProfile();
