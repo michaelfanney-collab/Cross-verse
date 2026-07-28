@@ -77,11 +77,13 @@ alert("Session: " + (data.session ? "YES" : "NO"));
 
       if (profileError) {
 
-        alert("Profile creation failed: " + profileError.message);
+    console.log(profileError);
 
-        return;
+    alert(JSON.stringify(profileError));
 
-      }
+    return;
+
+}
 
       alert("Account created successfully!");
 
