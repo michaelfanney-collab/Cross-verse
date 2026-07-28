@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     e.preventDefault();
 
-    const username = document.getElementById("username").value.trim();
-
     const email = document.getElementById("email").value.trim();
 
     const password = document.getElementById("password").value;
@@ -34,36 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const { data, error } =
 
-  await window.supabaseClient.auth.signUp({
+        await window.supabaseClient.auth.signUp({
 
-    email,
+          email,
 
-    password,
+          password
 
-  });
+        });
 
-if (error) {
-
-  alert("Signup failed: " + error.message);
-
-  return;
-
-}
-
-if (!data.user) {
-
-  alert("No user was returned from Supabase.");
-
-  console.log(data);
-
-  return;
-
-}
-
-alert("User ID: " + data.user.id);
-
-alert("Session: " + (data.session ? "YES" : "NO"));
-      
       if (error) {
 
         alert("Signup failed: " + error.message);
@@ -71,38 +47,6 @@ alert("Session: " + (data.session ? "YES" : "NO"));
         return;
 
       }
-
-      const { error: profileError } =
-
-        await window.supabaseClient
-
-          .from("Profiles")
-
-          .insert([
-
-            {
-
-              id: data.user.id,
-
-              User_name: username,
-
-              
-
-              
-
-            }
-
-          ]);
-
-      if (profileError) {
-
-    console.log(profileError);
-
-    alert(JSON.stringify(profileError));
-
-    return;
-
-}
 
       alert("Account created successfully!");
 
@@ -116,4 +60,4 @@ alert("Session: " + (data.session ? "YES" : "NO"));
 
   });
 
-});  
+});
